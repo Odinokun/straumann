@@ -9,12 +9,16 @@ block variables
   - var breadcrumbs     = 'breadcrumbs'
 
 block content
-  .main-wrap.no-js
+  .main-wrap
     include ../sections/header
 
     //begin content
     main.main.index
-      .container
+      //begin index__slider
+      .index__slider.index-slider#index-slider
+        .index-slider__item.index-slider__item--01
+      //end index__slider
+
     //end content
 
     include ../sections/footer
