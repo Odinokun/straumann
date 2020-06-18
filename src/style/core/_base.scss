@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+p,
+span {
+  margin: 0 0 10px 0;
+
+  @include responsive-font(30, 15);
+  strong {
+    font-weight: 700;
+  }
+}
+
+a {
+  transition: color .5s;
+  text-decoration: none;
+  color: $highlight;
+  &:hover {
+    color: $highlight-hov;
+  }
+}
+
+ol,
+ul {
+  li {
+    padding: 0;
+  }
+}
+
+ul {
+  li {
+    // путь к кастомной картинке пункта ul
+    // list-style-image: url('../img/ul.png');
+  }
+}
+
+//кастомные пункты списка с цифрами
+ol {
+  // list-style: none;
+  // @include counter(li);
+  li::before {
+    // color: $brand;
+  }
+}
+
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+
+input {
+  padding: 3px 10px 5px 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  &::placeholder {
+    @include placeholder-color(#fff);
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+input.error,
+textarea.error {
+  border-color: #ed1b24 !important;
+  background: #fbd1d3 !important;
+}
+
+svg {
+  display: block;
+  overflow: visible;
+}
+
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  //свойство для исправления бага 100vh для мобильных
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
+  //свойство для плавной прокрутки на яблоках
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1810px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.title {
+  @include responsive-font(87, 35);
+}
+
+.btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-block;
+  padding: 10px 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 5px !important;
+  background-color: $highlight;
+  box-shadow: none;
+  &:hover {
+    color: #fff;
+    background-color: $highlight-hov;
+  }
+}
