@@ -1,0 +1,40 @@
+//begin header
+header.header
+  .container
+    a(href="#").header__logo
+      img(src="assets/img/logo.svg" alt="logo")
+
+    //begin header__menu
+    .header__menu.header-menu
+      a(href="#").header-menu__close
+        +svg('close')
+
+      ul.header-menu__list
+        li.header-menu__item
+          a(href="#").header-menu__link Про імплантати
+        li.header-menu__item
+          a(href="#").header-menu__link.active Переваги Straumann
+        li.header-menu__item
+          a(href="#").header-menu__link Корисна інформація
+        li.header-menu__item
+          a(href="#").header-menu__link Ціни
+
+      a(href="#").header-menu__btn.header-menu-btn
+        .header-menu-btn__svg
+          +svg('search')
+        span Знайти клініку
+
+      .header-menu__lang
+        a(href="#").header-menu__lang-link.active UA
+        span /
+        a(href="#").header-menu__lang-link RU
+    //end header__menu
+
+    a(href="#").header__btn.header-btn
+      .header-btn__svg
+        +svg('search')
+      span Знайти клініку
+
+    a(href="#").header__burger
+      +svg('burger')
+//end header
