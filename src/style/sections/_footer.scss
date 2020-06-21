@@ -1,0 +1,26 @@
+.footer {
+  position: relative;
+  border-top: 1px solid $highlight;
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .language {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    transform: translateY(-50px);
+
+    @include max(640) {
+      display: none;
+    }
+  }
+}
+
+.footer__copyright {
+  font-weight: 400;
+
+  @include responsive-font(18, 14);
+}
