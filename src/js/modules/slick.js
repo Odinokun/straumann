@@ -2,7 +2,61 @@ module.exports = function() {
 
   // begin Slick slider
 
-  $('.slick').slick({
+  //begin INDEX SLIDER
+    // if (window.innerWidth < 768) {
+    //   $('#index-slider').slick('unslick');
+    // }
+    // else {
+    //   $('#index-slider').slick({
+    //     dots: true,
+    //     arrows: false,
+    //     fade: true,
+    //     infinite: true,
+    //     // autoplay: true
+    //     responsive: [
+    //       {
+    //         breakpoint: 766,
+    //         settings: "unslick"
+    //       }
+    //     ]
+    //   });
+    // }
+
+    //проверка ширины окна при загрузке
+    if (window.innerWidth >= 768) {
+      $('#index-slider').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        infinite: true,
+        autoplay: true
+      });
+    }
+
+    //counter for index-slider dots
+    $(window).on('load', function () {
+      let btns = $('#index-slider').find('.slick-dots li button');
+      let dots = $('#index-slider').find('.slick-dots');
+
+      for (let i = 0; i < btns.length; i++){
+        let number = i + 1;
+        let btn = $(btns)[i];
+
+        if (number < 10) {
+          number = '0' + number
+        }
+
+        $(btn).html(number);
+      }
+
+      $(dots).css('opacity', '1');
+    });
+  //end INDEX SLIDER
+
+
+
+
+  $('#slick').slick({
     dots: false,
     arrows: true,
     infinite: true,

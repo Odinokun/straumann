@@ -19,15 +19,13 @@ header.header
         li.header-menu__item
           a(href="#").header-menu__link Ціни
 
-      a(href="#").header-menu__btn.header-menu-btn
-        .header-menu-btn__svg
+      a(href="#").header-menu__btn.header-btn
+        .header-btn__svg
           +svg('search')
         span Знайти клініку
 
       .header-menu__lang
-        a(href="#").header-menu__lang-link.active UA
-        span /
-        a(href="#").header-menu__lang-link RU
+        include ../elements/language
     //end header__menu
 
     a(href="#").header__btn.header-btn
