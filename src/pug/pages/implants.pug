@@ -1,0 +1,56 @@
+extends ../_template
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.implants
+      .container
+        //begin implants-row
+        .implants-row
+          h2.title.implants-row__title Що потрібно знати пацієнту
+          include ../elements/docs-slider
+        //end implants-row
+
+        //begin implants-row
+        .implants-row
+          h2.title.implants-row__title Варіанти лікування
+          
+          //begin implants-options
+          .implants-options
+            //begin implants-options__item
+            a(href="#").implants-options__item
+              .implants-options__item-pic
+                img(src="assets/img/implants-option-01.jpg" alt="picture")
+              h3.implants-options__item-title Один або декілька зубів відсутні
+            //end implants-options__item
+            //begin implants-options__item
+            a(href="#").implants-options__item
+              .implants-options__item-pic
+                img(src="assets/img/implants-option-02.jpg" alt="picture")
+              h3.implants-options__item-title Відсутні всі зуби
+            //end implants-options__item
+            //begin implants-options__item
+            a(href="#").implants-options__item
+              .implants-options__item-pic
+                img(src="assets/img/implants-option-03.jpg" alt="picture")
+              h3.implants-options__item-title Протези чи імплантати
+            //end implants-options__item
+
+
+          //end implants-options
+        //end implants-row
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

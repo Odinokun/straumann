@@ -1,0 +1,24 @@
+mixin doc-slide(pic)
+  //begin docs-slider__slide
+  .docs-slider__slide
+    .docs-slider__pic(style="background-image:url('assets/img/doc-" + pic + ".jpg');")
+
+      a(href="#").btn-transparent
+        span Дивитися
+        .btn-transparent__icon
+          +svg('arr-right')
+
+      .docs-slider__pic-text
+        span Kodel prarasta danti butina kuo SKUBIAU ATSTATYTI?
+    .docs-slider__name Raimondas Savickas
+    .docs-slider__position Gydytojas - ortopedas
+  //end docs-slider__slide
+
+//begin docs-slider
+.docs-slider#docs-slider
+  +doc-slide('01')
+  +doc-slide('02')
+  +doc-slide('03')
+  +doc-slide('04')
+  +doc-slide('05')
+//end docs-slider
