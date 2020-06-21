@@ -1,0 +1,265 @@
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-header__title {
+  white-space: nowrap;
+}
+
+.search-header__form {
+  position: relative;
+  width: 100%;
+  margin-left: 100px;
+  transform: translateY(-3px);
+
+  @include max(767) {
+    display: none;
+  }
+}
+
+.search-header__form-input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  width: 100%;
+  height: 40px;
+  padding: 5px 60px 5px 20px;
+  text-align: center;
+  color: #000;
+  border: none;
+  background-color: #fff;
+}
+
+.search-header__form-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.search-header__form-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  background-color: $highlight;
+  svg {
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.search-clinics {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+//begin #CLINIC ITEM
+.search-clinic {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 15px);
+  margin-bottom: 30px;
+  border: 1px solid $highlight;
+
+  @include max(1023) {
+    width: calc(50% - 15px);
+  }
+  @include max(640) {
+    width: 100%;
+  }
+}
+
+.search-clinic__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+  padding: 15px 15px 0 15px;
+}
+
+.search-clinic__logo {
+  display: flex;
+  justify-content: center;
+  width: 85px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #fff;
+  img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.search-clinic__title {
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 200px;
+  margin: 0 auto 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.search-clinic__slider {
+  width: 100%;
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 33px;
+    height: 18px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    svg {
+      fill: #fff;
+      width: 33px;
+      height: 18px;
+    }
+  }
+  .prev {
+    left: 15px;
+  }
+  .next {
+    right: 15px;
+  }
+}
+
+.search-clinic__slider-img {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.search-clinic__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.search-clinic__doctor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  transform: translateY(-100%);
+}
+
+.search-clinic__doctor-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+}
+
+.search-clinic__doctor-position {
+  font-size: 10px;
+  font-weight: 300;
+  color: #000;
+}
+
+.search-clinic__adress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px 0 10px;
+  text-align: center;
+  span {
+    font-weight: 300;
+
+    @include responsive-font(18, 16);
+  }
+  a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+
+    @include responsive-font(18, 16);
+
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.search-clinic__phone {
+  position: relative;
+  padding: 15px 10px;
+  text-align: center;
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    max-width: 144px;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: $highlight;
+  }
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+
+    @include responsive-font(21, 16);
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.search-clinic__email {
+  padding: 15px 10px;
+  text-align: center;
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+
+    @include responsive-font(21, 16);
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.search-clinic__site {
+  width: 100%;
+  transition: .5s;
+  background-color: $highlight;
+  &:hover {
+    background-color: $highlight-hov;
+  }
+  a {
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+
+    @include responsive-font(21, 16);
+  }
+}
+
+//end #CLINIC ITEM

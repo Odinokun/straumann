@@ -1,0 +1,97 @@
+extends ../_template
+
+mixin clinic-card(title)
+  //begin search-clinic
+  .search-clinic
+    //begin search-clinic__header
+    .search-clinic__header
+      .search-clinic__logo
+        img(src="assets/img/search-logo.png" alt="picture")
+      .search-clinic__title
+        span #{title}
+    //end search-clinic__header
+
+    //begin search-clinic__slider
+    .search-clinic__slider
+      .search-clinic__slider-img
+        img(src="assets/img/search-01.jpg" alt="picture")
+      .search-clinic__slider-img
+        img(src="assets/img/search-02.jpg" alt="picture")
+      .search-clinic__slider-img
+        img(src="assets/img/search-03.jpg" alt="picture")
+    //end search-clinic__slider
+
+    //begin search-clinic__info
+    .search-clinic__info
+      //begin search-clinic__doctor
+      .search-clinic__doctor
+        .search-clinic__doctor-name Algirdas PUIŠYS
+        .search-clinic__doctor-position Dr. Gydytojas periodontologas
+      //end search-clinic__doctor
+
+      //begin search-clinic__adress
+      .search-clinic__adress
+        span Адреса
+        a(href="https://goo.gl/maps/W3pBrQNo9nPhqauK7" target="_blank" rel="nofollow noopener noreferrer") вулиця Хрещатик, 22, Київ, 01001
+      //end search-clinic__adress
+
+      //begin search-clinic__phone
+      .search-clinic__phone
+        a(href="tel:+380679999999") +38 067 123 4567
+      //end search-clinic__phone
+
+      //begin search-clinic__email
+      .search-clinic__email
+        a(href="mailto:info@vicklinika.ua") info@vicklinika.ua
+      //end search-clinic__email
+    //end search-clinic__info
+
+    //begin search-clinic__site
+    .search-clinic__site
+      a(href="#") www.vicklinika.ua
+    //end search-clinic__site
+
+  //end search-clinic
+
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.search
+      .container
+        //begin search__header
+        header.search__header.search-header
+          h2.title.search-header__title Пошук клініки
+
+          //begin search-header__form
+          form.search-header__form
+            input(type='search' placeholder='Знайти клініку').search-header__form-input
+            input(type='submit').search-header__form-submit
+            .search-header__form-btn
+              +svg('search')
+          //end search-header__form
+        //end search__header
+
+        //begin search__clinics
+        .search__clinics.search-clinics
+          +clinic-card('Назва кліники')
+          +clinic-card('Назва кліники довга')
+          +clinic-card('Назва кліники')
+          +clinic-card('Назва кліники довга')
+          +clinic-card('Назва кліники')
+          +clinic-card('Назва кліники')
+        //end search__clinics
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

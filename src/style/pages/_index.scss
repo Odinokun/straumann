@@ -1,3 +1,14 @@
+.index {
+  .header {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
 #index-slider {
   margin-bottom: 0;
   .index-slider__lang {
@@ -49,6 +60,7 @@
       }
     }
     button {
+      font-family: 'Raleway', sans-serif;
       font-size: 18px;
       font-weight: 600;
       position: relative;
