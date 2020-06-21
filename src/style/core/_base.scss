@@ -14,7 +14,7 @@ body {
 
 html {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.875rem;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
   color: #fff;
@@ -36,14 +36,17 @@ h6 {
   margin: 0 0 10px 0;
 }
 
-p,
-span {
+p {
   margin: 0 0 10px 0;
 
-  @include responsive-font(30, 15);
+  @include responsive-font(20, 16);
   strong {
     font-weight: 700;
   }
+}
+
+span {
+  @include responsive-font(22, 16);
 }
 
 a {
@@ -130,11 +133,72 @@ svg {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1810px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 30px;
 }
 
 .title {
-  @include responsive-font(87, 35);
+  line-height: 1;
+
+  @include responsive-font(60, 35);
+}
+
+.subtitle {
+  line-height: 1;
+
+  @include responsive-font(38, 20);
+}
+
+.highlight-text {
+  font-style: normal;
+  color: $highlight;
+}
+
+.btn-transparent {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  transition: .5s;
+  text-decoration: none;
+  border: 2px solid $highlight;
+  &:hover {
+    border: 2px solid $highlight-hov;
+    .btn-transparent__icon {
+      background-color: $highlight-hov;
+    }
+    span {
+      color: $highlight-hov;
+    }
+  }
+
+  svg {
+    fill: #fff;
+    width: 24px;
+    height: 15px;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 170px;
+    height: 40px;
+    padding: 5px 10px;
+    transition: .5s;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+  }
+  .btn-transparent__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    transition: .5s;
+    background-color: $highlight;
+  }
 }

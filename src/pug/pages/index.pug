@@ -16,10 +16,110 @@ block content
     main.main.index
       //begin index__slider
       .index__slider.index-slider#index-slider
-        .index-slider__item.index-slider__item--01
-      //end index__slider
+        //-begin index-slide-01
+        .index-slider__slide.index-slide-01
+          .container
+            .index-slide-01__text-block
+              h2.title.index-slide-01__title Варто насмілитись!
+              p Швейцарські зубні імлантати  Straumann  для впевненої посмішки на все життя
+            a(href="#").index-slide-01__btn.btn-transparent
+              span Детальніше
+              .btn-transparent__icon
+                +svg('arr-right')
+            .index-slide-01__lion-img
+              img(src="assets/img/slide-01-mob.jpg" alt="picture")
+            .index-slider__lang
+              include ../elements/language
+        //-end index-slide-01
 
+        //-begin index-slide-02
+        .index-slider__slide.index-slide-02
+          .container
+            .index-slide__header
+              h2.title.index-slide__title Чому Штрауманн
+            //begin index-slide-02__items
+            ul.index-slide-02__items
+              li.index-slide-02__item
+                h3.subtitle.index-slide-02__item-title Найкращий вибір
+                p У всьому світі Імлантати Straumann встановлють до <strong><i class='highlight-text'>60 разів</i></strong> частіше ніж імлантити інших виробників
+              li.index-slide-02__item
+                h3.subtitle.index-slide-02__item-title Унікальні характеристики
+                p Запатентований сплав <strong><i class='highlight-text'>Roxolid</i></strong> на міцніший за титан  на 35%, а інікальна поверхня імплантату <strong><i class='highlight-text'>SLActive</i></strong>  подвоює швидкість приживлення
+              li.index-slide-02__item
+                h3.subtitle.index-slide-02__item-title Світовий лідер в Україні
+                p Зубні імплантати Straumann  займають <strong><i class='highlight-text'>25%</i></strong> світового ринку та <strong><i class='highlight-text'>35%</i></strong> українського ринку  імплантатів
+              li.index-slide-02__item
+                h3.subtitle.index-slide-02__item-title Легендарна швейцарська якість
+                p Зубні імплантати  виробляються у Швеції на базі наукової співпраці з більш ніж <strong><i class='highlight-text'>150 університетів</i></strong>
+              li.index-slide-02__item
+                h3.subtitle.index-slide-02__item-title Світовий лідер в Україні
+                p Зубні імплантати Straumann  займають <strong><i class='highlight-text'>25%</i></strong> світового ринку та <strong><i class='highlight-text'>35%</i></strong> українського ринку  імплантатів
+              li.index-slide-02__item
+                h3.subtitle.index-slide-02__item-title Легендарна швейцарська якість
+                p Зубні імплантати  виробляються у Швеції на базі наукової співпраці з більш ніж <strong><i class='highlight-text'>150 університетів</i></strong>
+            //end index-slide-02__items
+            .index-slide-02__footer
+              a(href="#").btn-transparent
+                span Детальніше
+                .btn-transparent__icon
+                  +svg('arr-right')
+            .index-slider__lang
+              include ../elements/language
+        //-end index-slide-02
+
+        //-begin index-slide-03
+        .index-slider__slide.index-slide-03
+          .container
+            .index-slide__header
+              h2.title.index-slide__title Ціни на зубну імплантацію
+              p <strong><i class='highlight-text'>Імплантація</i></strong> – це процес відновлення втраченого зуба, що складається з двох етапів: хірургічного (приживлення імплантату) та і ортопедичного (виготовлення і встановлення коронки)
+              .index-slide-03__images
+                //begin index-slide-03__img
+                .index-slide-03__img
+                  img(src="assets/img/slide-03-img-01.jpg" alt="picture")
+                  a(href="#").index-slide-03__img-btn Імплантація зубів
+                //end index-slide-03__img
+                //begin index-slide-03__img
+                .index-slide-03__img
+                  img(src="assets/img/slide-03-img-01.jpg" alt="picture")
+                  a(href="#").index-slide-03__img-btn Імплантація зубів
+                //end index-slide-03__img
+              .index-slide-03__footer
+                a(href="#").btn-transparent
+                  span Детальніше
+                  .btn-transparent__icon
+                    +svg('arr-right')
+              .index-slider__lang
+                include ../elements/language
+        //-end index-slide-03
+
+        //-begin index-slide-04
+        .index-slider__slide.index-slide-04
+          .container
+            .index-slide__header
+              h2.title.index-slide__title Знайти клініку
+            ul.index-slide__cities
+              li.index-slide__city
+                a(href="#").index-slide__city-link Київ
+              li.index-slide__city
+                a(href="#").index-slide__city-link Львів
+              li.index-slide__city
+                a(href="#").index-slide__city-link Харків
+              li.index-slide__city
+                a(href="#").index-slide__city-link Дніпро
+              li.index-slide__city
+                a(href="#").index-slide__city-link Одеса
+              li.index-slide__city
+                a(href="#").index-slide__city-link Ужгород
+            .index-slide-04__footer
+              a(href="#").btn-transparent
+                span Інші міста
+                .btn-transparent__icon
+                  +svg('arr-right')
+            .index-slider__lang
+              include ../elements/language
+        //-end index-slide-04
+      //end index__slider
     //end content
 
-    include ../sections/footer
     include ../sections/scripts
