@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'search',
     'implants',
-    'implant'
+    'implant',
+    'prices',
     ]);
 });
 
