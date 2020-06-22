@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'implants',
     'implant',
     'prices',
+    'info',
     ]);
 });
 

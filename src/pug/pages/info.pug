@@ -1,0 +1,61 @@
+extends ../_template
+
+mixin info__press-item(pic)
+  a(href="#").info__press-item.info-press-item
+    .info-press-item__pic
+      img(src="assets/img/info-press-item-" + pic + ".jpg" alt="picture")
+    .info-press-item__info
+      h3.info-press-item__title Это #TimeForEducation с современным контентом от ведущих экспертов
+      .info-press-item__footer
+        .info-press-item__footer-date 20 Apr 2020
+        .info-press-item__footer-hash #Education
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.info
+      .container
+        //begin info-row
+        .info-row
+          h2.title.info-row__title Корисна інформація
+          include ../elements/info-slider
+        //end info-row
+
+        //begin info-row
+        .info-row
+          h2.title.info-row__title Відео
+          include ../elements/video-slider
+        //end info-row
+
+        //begin info-row
+        .info-row
+          h2.title.info-row__title О нас в прессе
+          //begin info__press-list
+          .info__press-list
+            +info__press-item('01')
+            +info__press-item('02')
+            +info__press-item('03')
+            +info__press-item('04')
+          //end info__press-list
+          .info__press-footer
+            a(href="#").btn-transparent
+              span Дивитися
+              .btn-transparent__icon
+                +svg('arr-right')
+        //end info-row
+
+        include ../sections/desktop-hidden
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
