@@ -1,0 +1,56 @@
+extends ../_template
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.implants
+      .container
+        //begin implants-row
+        .implants-row
+          h2.title.title--upper.implants-row__title Чому ПОТРІБНО ЯК НАЙШВИДШЕ ВІДНОВИТИ ВТРАЧЕНИЙ ЗУБ?
+
+          //begin implants-person
+          .implants-person
+            .implants-person__pic
+              img(src="assets/img/doc-01.jpg" alt="picture")
+              .implants-person__pic-text
+                span Kodel prarasta danti butina kuo SKUBIAU ATSTATYTI?
+
+            .implants-person__info
+              ul.implants-person__info-list
+                li.implants-person__info-item
+                  p При втраті одного чи декількох зубів важливо відновити їх якнайшвидше. Найкращим методом відновлення залишаються зубні імплантати.
+                li.implants-person__info-item
+                  p Якщо лікування не розпочати вчасно, в організмі розпочнуть небажані та незворотні процеси
+                li.implants-person__info-item
+                  p Без звичного навантаження на місці зуба відсутнього зуба почне атрофуватися щелепна кістка. Через це може змінитись форма обличчя, людина буде виглядати старшою за свій вік. Непомітні внутрішні проблеми проявляться зовні
+                li.implants-person__info-item
+                  p В сторону відсутнього зуба почнуть зміщуватись сусідні зуби. Між здоровими зубами з'являться щілини, що погіршить якість вашої посмішки, та створить дискомфорт.
+                li.implants-person__info-item
+                  p Зміниться прикус, через що стане складніше пережовувати їжу, можуть початись головні болі.
+              a(href="#").btn-transparent
+                span Дивитися
+                .btn-transparent__icon.btn-transparent__icon--video
+                  +svg('video')
+          //end implants-person
+
+        //end implants-row
+        //begin implants-row
+        .implants-row
+          h2.title.implants-row__title Що потрібно знати пацієнту
+          include ../elements/docs-slider
+        //end implants-row
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
