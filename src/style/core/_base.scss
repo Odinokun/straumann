@@ -143,7 +143,7 @@ svg {
 .title {
   line-height: 1;
 
-  @include responsive-font(55, 35);
+  @include responsive-font(70, 35);
 }
 
 .title--upper {
@@ -212,5 +212,22 @@ svg {
     width: 27px;
     height: 27px;
     }
+  }
+}
+
+.desktop-hidden{
+  display: none;
+  .index-slide-04{
+    width:calc(100% + 60px);
+    margin-left: -30px;
+    .container{
+      padding-top: 0;
+    }
+  }
+  .language{
+    display: none;
+  }
+  @include max(767) {
+    display: block;
   }
 }
