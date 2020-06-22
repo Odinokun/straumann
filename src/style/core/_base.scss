@@ -127,8 +127,9 @@ svg {
 }
 
 .main {
-  flex-grow: 1;
   padding-top: 150px;
+
+  flex-grow: 1;
 }
 
 .container {
@@ -142,13 +143,17 @@ svg {
 .title {
   line-height: 1;
 
-  @include responsive-font(60, 35);
+  @include responsive-font(55, 35);
+}
+
+.title--upper {
+  text-transform: uppercase;
 }
 
 .subtitle {
   line-height: 1;
 
-  @include responsive-font(38, 20);
+  @include responsive-font(32, 20);
 }
 
 .highlight-text {
@@ -160,7 +165,6 @@ svg {
   display: flex;
   align-items: center;
   cursor: pointer;
-
   transition: .5s;
   text-decoration: none;
   border: 2px solid $highlight;
@@ -201,5 +205,12 @@ svg {
     height: 40px;
     transition: .5s;
     background-color: $highlight;
+  }
+  .btn-transparent__icon--video{
+    svg {
+
+    width: 27px;
+    height: 27px;
+    }
   }
 }

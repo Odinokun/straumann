@@ -7,7 +7,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'search',
-    'implants'
+    'implants',
+    'implant'
     ]);
 });
 
