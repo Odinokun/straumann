@@ -99,6 +99,26 @@ module.exports = function() {
   });
   //end DOCS SLIDER
 
+  //begin VIDEO SLIDER
+  $('#video-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: "<div class='prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"50\" viewBox=\"0 0 30 50\"><path d=\"M24.845.004l4.394 4.437L8.86 24.64l20.39 20.393-4.42 4.418L0 24.622z\"/></svg></div>",
+    nextArrow: "<div class='next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"50\" viewBox=\"0 0 30 50\"><path d=\"M4.375 49.452L-.02 45.015l20.378-20.201L-.032 4.422 4.388.004 29.22 24.833z\"/></svg></div>",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+  //end VIDEO SLIDER
+
 
 
 
