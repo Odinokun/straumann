@@ -82,6 +82,12 @@
   margin: 0 auto;
   .btn-transparent {
     border-color: #000;
+    border-color: lighten(#000, 10%);;
+    &:hover {
+      .btn-transparent__icon {
+        background-color: lighten(#000, 10%);;
+      }
+    }
     span {
       font-weight: 600;
       color: #000;
