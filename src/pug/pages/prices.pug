@@ -1,0 +1,42 @@
+extends ../_template
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.prices
+      .container
+        //begin prices-row
+        .prices-row
+          h2.title.implants-row__title Ціни
+          .prices__descr
+            p Prarasto danties atkūrimo procesą sudaro keli etapai – implantavimas (chirurginis etapas) ir vainikėlio ant implanto gamyba (protezavimo etapas).
+
+          //begin prices__items
+          .prices__items
+            a(href="#").prices__item
+              .prices__item-pic
+                img(src="assets/img/prices-01.jpg" alt="picture")
+              h3.prices__item-title Dantų <i class='highlight-text'>protezavimo</i> kainos
+            a(href="#").prices__item
+              .prices__item-pic
+                img(src="assets/img/prices-02.jpg" alt="picture")
+              h3.prices__item-title Dantų <i class='highlight-text'>implantacijos</i> kainos
+          //end prices__items
+        //end prices-row
+
+        include ../sections/desktop-hidden
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

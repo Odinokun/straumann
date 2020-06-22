@@ -206,28 +206,28 @@ svg {
     transition: .5s;
     background-color: $highlight;
   }
-  .btn-transparent__icon--video{
+  .btn-transparent__icon--video {
     svg {
-
-    width: 27px;
-    height: 27px;
+      width: 27px;
+      height: 27px;
     }
   }
 }
 
-.desktop-hidden{
+.desktop-hidden {
   display: none;
-  .index-slide-04{
-    width:calc(100% + 60px);
+
+  @include max(767) {
+    display: block !important;
+  }
+  .index-slide-04 {
+    width: calc(100% + 60px);
     margin-left: -30px;
-    .container{
+    .container {
       padding-top: 0;
     }
   }
-  .language{
+  .language {
     display: none;
-  }
-  @include max(767) {
-    display: block;
   }
 }
