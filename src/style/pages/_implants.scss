@@ -1,5 +1,8 @@
 .implants-row {
   margin-bottom: 80px;
+  @include max(767) {
+    margin-bottom: 60px;
+  }
 }
 
 .implants-row__title {
