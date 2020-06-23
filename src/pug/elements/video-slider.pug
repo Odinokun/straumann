@@ -1,21 +1,21 @@
 mixin video-slide(text)
   .video-slider__slide
     .video-slider__slide-inn
-      h3.video-slider__title Как побороть страх перед стоматологическим лечением
+      h3.video-slider__title #{text}
       .video-slider__logo
         img(src="assets/img/logo.svg" alt="logo")
 
-      a(href="#").btn-transparent
+      a(data-fancybox="" href="https://www.youtube.com/watch?v=KoezqT2rknI").btn-transparent
         span Дивитися
         .btn-transparent__icon.btn-transparent__icon--video
           +svg('video')
 
 //begin videos-slider
 .video-slider#video-slider
-  +video-slide('01')
-  +video-slide('02')
-  +video-slide('01')
-  +video-slide('02')
-  +video-slide('01')
-  +video-slide('02')
+  +video-slide('Как побороть страх перед стоматологическим лечением')
+  +video-slide('Как побороть страх перед стоматологическим лечением')
+  +video-slide('Как побороть страх перед стоматологическим лечением')
+  +video-slide('Как побороть страх перед стоматологическим лечением')
+  +video-slide('Как побороть страх перед стоматологическим лечением')
+  +video-slide('Как побороть страх перед стоматологическим лечением')
 //end videos-slider

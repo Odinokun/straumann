@@ -1,0 +1,84 @@
+extends ../_template
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.map
+      .container
+        h2.title.map__title Пошук кліник
+
+      //begin map__wrap
+      .map__wrap
+        //begin map__aside
+        .map__aside.map-aside
+          .map-aside__body
+            h3.map-aside__title Найкращі стоматологічні клініки працюють зі Straumann
+
+            //begin map-aside__search-form
+            form.map-aside__search-form
+              input(type='search' placeholder='Ваша адреса').map-aside__search
+              input(type='submit').map-aside__submit
+              .map-aside__btn
+                +svg('search')
+            //end map-aside__search-form
+
+            h4.map-aside__subtitle Комфортна для добирання відстань
+
+            .map-range-slider-wrap
+              #map-range-slider
+              .map-range-value-wrap
+                span до
+                input(readonly='')#map-range-value.map-range-value
+                span км
+
+            a(href="#").map-aside-btn
+              span Переглянути результати
+              .btn-transparent__icon
+                +svg('arr-r')
+        //end map__aside
+
+        //begin map__body
+        .map__body#map__body
+        //end map__body
+      //end map__wrap
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
+
+    script.
+      function initMap() {
+        var myLatLng = {lat: 39.164232, lng: -76.625081};
+        var windowWidth = document.documentElement.clientWidth;
+
+        var mapCenter;
+
+        if (windowWidth > 1023) {
+          mapCenter = {lat: 39.165, lng: -76.67};
+        } else {
+          mapCenter = {lat: 39.165, lng: -76.625};
+        }
+
+        var map = new google.maps.Map(document.getElementById('map__body'), {
+          zoom: 13,
+          center: mapCenter,
+          styles: [{"featureType": "all","elementType": "labels.text.fill","stylers": [{"saturation": 36},{"color": "#000000"},{"lightness": 40}]},{"featureType": "all","elementType": "labels.text.stroke","stylers": [{"visibility": "on"},{"color": "#000000"},{"lightness": 16}]},{"featureType": "all","elementType": "labels.icon","stylers": [{"visibility": "off"}]},{"featureType": "administrative","elementType": "geometry.fill","stylers": [{"color": "#000000"},{"lightness": 20}]},{"featureType": "administrative","elementType": "geometry.stroke","stylers": [{"color": "#000000"},{"lightness": 17},{"weight": 1.2}]},{"featureType": "landscape","elementType": "geometry","stylers": [{"color": "#000000"},{"lightness": 20}]},{"featureType": "poi","elementType": "geometry","stylers": [{"color": "#000000"},{"lightness": 21}]},{"featureType": "road.highway","elementType": "geometry.fill","stylers": [{"color": "#000000"},{"lightness": 17}]},{"featureType": "road.highway","elementType": "geometry.stroke","stylers": [{"color": "#000000"},{"lightness": 29},{"weight": 0.2}]},{"featureType": "road.arterial","elementType": "geometry","stylers": [{"color": "#000000"},{"lightness": 18}]},{"featureType": "road.local","elementType": "geometry","stylers": [{"color": "#000000"},{"lightness": 16}]},{"featureType": "transit","elementType": "geometry","stylers": [{"color": "#000000"},{"lightness": 19}]},{"featureType": "water","elementType": "geometry","stylers": [{"color": "#000000"},{"lightness": 17}]}]
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: 'assets/img/marker.png'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")

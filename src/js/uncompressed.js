@@ -11,6 +11,9 @@ $(document).ready(function ($) {
     'implant',
     'prices',
     'info',
+    'blog',
+    'map-01',
+    'map-02',
     ]);
 });
 

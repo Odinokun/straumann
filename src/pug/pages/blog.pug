@@ -34,24 +34,7 @@ block content
         //begin info-row
         .info-row
           h2.title.info-row__title Відео
-          include ../elements/video-slider
-        //end info-row
-
-        //begin info-row
-        .info-row
-          h2.title.info-row__title О нас в прессе
-          //begin info__press-list
-          .info__press-list
-            +info__press-item('01')
-            +info__press-item('02')
-            +info__press-item('02')
-            +info__press-item('01')
-          //end info__press-list
-          .info__press-footer
-            a(href="#").btn-transparent
-              span Дивитися
-              .btn-transparent__icon
-                +svg('arr-right')
+          include ../elements/reviews-slider
         //end info-row
 
         include ../sections/desktop-hidden

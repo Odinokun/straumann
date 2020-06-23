@@ -7,6 +7,10 @@
     padding: 0;
   }
 
+  .slick-track {
+    display: flex;
+  }
+
   .prev,
   .next {
     position: absolute;
@@ -65,6 +69,8 @@
 }
 
 .video-slider__slide {
+  display: flex !important;
+  height: auto;
   margin: 0 8px;
   padding: 50px 30px;
   background-color: $highlight;
@@ -81,9 +87,10 @@
   max-width: 300px;
   margin: 0 auto;
   .btn-transparent {
+    margin-top: auto;
     border-color: #000;
-    border-color: lighten(#000, 10%);;
     &:hover {
+      border-color: lighten(#000, 10%);
       .btn-transparent__icon {
         background-color: lighten(#000, 10%);;
       }

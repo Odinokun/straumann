@@ -6,24 +6,10 @@ $(function() {
   // begin menu
   require('./modules/menu')();
 
-  // begin phone mask
-  // require('./modules/maskedinput')();
-
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
-
   // begin Slick slider
   require('./modules/slick')();
 
-  // begin Popup
-  // require('./modules/popup')();
-
-  // begin Sticky header
-  // require('./modules/stickyHeader')();
-
-  // begin Animate.css
-  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
+  // range slider
+  require('./modules/ui')();
 
 });

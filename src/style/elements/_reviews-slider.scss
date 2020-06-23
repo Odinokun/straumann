@@ -1,0 +1,130 @@
+.reviews-slider {
+  padding: 0 40px;
+
+  @include max(640) {
+    padding: 0 0;
+  }
+  @include max(425) {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 25px;
+    height: 42px;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    @include max(640) {
+      width: 16px;
+      height: 27px;
+    }
+
+    &:hover {
+      svg {
+        fill: $highlight;
+
+        @include max(767) {
+          fill: #000;
+        }
+      }
+    }
+    svg {
+      fill: #fff;
+      width: 25px;
+      height: 42px;
+      transition: .5s;
+
+      @include max(640) {
+        width: 16px;
+        height: 27px;
+      }
+    }
+  }
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+  .slick-slide[tabindex='-1'],
+  .slick-active + .slick-slide {
+    @include max(640) {
+      opacity: .5;
+    }
+    .docs-slider__name,
+    .docs-slider__position {
+      @include max(640) {
+        opacity: 0;
+      }
+    }
+  }
+  .slick-slide[tabindex='-1'] {
+    @include max(640) {
+      transform: translateX(50px);
+    }
+  }
+  .slick-active + .slick-slide {
+    @include max(640) {
+      transform: translateX(-50px);
+      opacity: .5;
+    }
+  }
+  .slick-active {
+    @include max(640) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.reviews-slider__slide {
+  display: flex !important;
+  flex-direction: column;
+  height: auto;
+  margin: 0 10px;
+  transition: .5s;
+
+  @include max(640) {
+    margin: 0;
+  }
+}
+
+.reviews-slide__pic {
+  width: 100%;
+  height: 270px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.reviews-slide__descr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 25px 20px;
+  text-align: center;
+  background-color: $highlight;
+
+  flex-grow: 1;
+  span {
+    font-weight: 700;
+    color: #fff;
+
+    @include responsive-font(22, 16);
+  }
+}
