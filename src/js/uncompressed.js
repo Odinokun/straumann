@@ -15,6 +15,7 @@ $(document).ready(function ($) {
     'map-01',
     'map-02',
     'inner',
+    'price',
     ]);
 });
 
