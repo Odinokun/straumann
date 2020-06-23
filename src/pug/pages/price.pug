@@ -1,0 +1,148 @@
+extends ../_template
+
+block variables
+  - var title       = 'Straumann'
+  - var description = 'Straumann'
+  - var ogtitle     = 'Straumann'
+
+  - var pageHeaderTitle = 'Straumann'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.price
+      .container
+        h2.title.price__title Ціни на зубне протезування
+        p Після  приживлення зубного імплантату (6-8 тижнів для імплантатів з поверхнею SLA та 3-4 тижні для імплантатів з унікальною поверхнею SLActive можна розпочинати етап протезування зубів. Повна  вартість лікування  залежить від кількості імплантатів, типу протезу, матеріалу коронки та вартості роботи стоматологічної клініки, яка проводить ваше лікування.
+        .price__btn
+          a(href="#").btn-transparent
+            span Знайти клініку
+            .btn-transparent__icon
+              +svg('arr-right')
+
+      //begin price__row
+      .price__row
+        .container
+          .price__item.price-item.price-item--33
+            h3.price-item__title.price-item__title--decor Металокерамічна
+            p Коронка виготовляється металу, з тонким шаром кераміки.
+            span.price-item__plus довговічна
+            span.price-item__minus з часом темнішає
+          .price__item.price-item.price-item--33
+            h3.price-item__title.price-item__title--decor Пресована кераміка
+            p Найестетичніший та натуральний матеріал. Зуби виглядають природньо
+            span.price-item__plus не змінює колір з часом
+            span.price-item__minus Більш крихкі, ніж інші матеріали
+          .price__item.price-item.price-item--33
+            h3.price-item__title.price-item__title--decor Цирконій
+            p Дуже міцний, як метал, білого кольору, тому виглядає естетично та природньо під шаром кераміки.
+            span.price-item__plus Не темніє.
+            span.price-item__minus Надорожча реставрація
+      //end price__row
+
+      //begin price__row
+      .price__row
+        .container
+          .price__item.price-item.price-item--67
+            h3.price-item__title 1.Відновлення одного зуба
+            .price-item__blocks
+              .price-item__block
+                h4.price-item__block-title Ціна металокерамічної реставрації
+                span 1 імплант 550-750 EUR
+                span Коронка 450-650  EUR
+                span <i class='highlight-text'>Разом 1000 – 1400 EUR</i>
+              .price-item__block
+                h4.price-item__block-title Ціна  реставрації з пресованої кераміки
+                span 1 імплант 550-750 EUR
+                span Коронка 550-750  EUR
+                span <i class='highlight-text'>Разом 1100 – 1500 EUR</i>
+              .price-item__block
+                h4.price-item__block-title Ціна  реставрації з цирконію
+                span 1 імплант 550-750 EUR
+                span Коронка 650-850  EUR
+                span <i class='highlight-text'>Разом 1200 – 1600 EUR</i>
+          .price__item.price-item.price-item--pic
+            img(src="assets/img/price-01.jpg" alt="picture")
+      //end price__row
+
+      //begin price__row
+      .price__row
+        .container
+          .price__item.price-item.price-item--67
+            h3.price-item__title 2. Відновлення декількох зубів
+            .price-item__blocks
+              .price-item__block
+                h4.price-item__block-title Ціна металокерамічної реставрації
+                span 2 імплантати 1100-1500 EUR
+                span Міст на 3 коронки 1200-1600  EUR
+                span <i class='highlight-text'>Разом 2300 – 3100 EUR</i>
+              .price-item__block
+                h4.price-item__block-title Ціна реставрації з цирконію
+                span 2 імплантати 1100-1500 EUR
+                span Міст на 3 коронки 1500-1900  EUR
+                span <i class='highlight-text'>Разом 2600 – 3400 EUR</i>
+          .price__item.price-item.price-item--pic
+            img(src="assets/img/price-02.jpg" alt="picture")
+      //end price__row
+
+      //begin price__row
+      .price__row
+        .container
+          .price__item.price-item.price-item--67
+            h3.price-item__title 3. Знімний протез
+            .price-item__blocks
+              .price-item__block
+                h4.price-item__block-title Ціна зубного протезу на двох імплантатах
+                span 2 імплантати 1100-1500 EUR
+                span Знімна пластина  1500-1800  EUR
+                span <i class='highlight-text'>Разом 2600 – 3300 EUR</i>
+              .price-item__block
+                h4.price-item__block-title Ціна зубного протезу на чотирьох імплантатах
+                span 4 імплантати 2200-3000 EUR
+                span Знімна пластина  2500-2800  EUR
+                span <i class='highlight-text'>Разом 4700 – 5800 EUR</i>
+          .price__item.price-item.price-item--pic
+            img(src="assets/img/price-03.jpg" alt="picture")
+      //end price__row
+
+      //begin price__row
+      .price__row
+        .container
+          .price__item.price-item.price-item--67
+            h3.price-item__title 4. Фіксований протез
+            .price-item__blocks
+              .price-item__block
+                h4.price-item__block-title Ціна металокерамічного протезу на 6 імплантатах (12 зубів)
+                span 6 імплантатів 3300-4500 EUR
+                span Протез  5500-5900  EUR
+                span <i class='highlight-text'>Разом  8800 – 10400 EUR</i>
+              .price-item__block
+                h4.price-item__block-title Ціна цирконієвого протезу на 6 імплантатах (12 зубів)
+                span 6 імплантатів  3300-4500 EUR
+                span Протез 6500-6900  EUR
+                span <i class='highlight-text'>Разом 9800 – 11400 EUR</i>
+          .price__item.price-item.price-item--pic
+            img(src="assets/img/price-04.jpg" alt="picture")
+      //end price__row
+
+      //begin price__row
+      .price__row.price__row--last
+        .container
+          h3.price-item__title Відновлення повного ряду зубів
+          p Повний ряд зубів можна відновити за допомогою знімного протезу, який найчастіше фіксується на 2-4 імплантатах або незнімного протеза, який найчастіше фіксується на 6-8 імплантатах, в окремих випадках  на 4 імплантатах. Для знімного протезу зуби виготовляються з якісного пластику. Зуби для незнімного протеза виготовляються з металокераміки або цирконію.
+          .price__btn
+            a(href="#").btn-transparent
+              span Знайти клініку
+              .btn-transparent__icon
+                +svg('arr-right')
+      //end price__row
+
+      .container
+        include ../sections/desktop-hidden
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

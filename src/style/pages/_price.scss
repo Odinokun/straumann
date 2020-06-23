@@ -1,0 +1,172 @@
+.price {
+  p,
+  span {
+    font-weight: 400;
+
+    @include responsive-font(20, 16);
+  }
+}
+
+.price__title {
+  margin-bottom: 40px;
+
+  @include max(767) {
+    text-align: center;
+  }
+}
+
+.price__row {
+  border-bottom: 1px solid $highlight;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @include max(640) {
+      flex-direction: column;
+    }
+  }
+}
+
+.price__row--last {
+  border-bottom: none;
+}
+
+.price-item--33 {
+  width: calc(33.33% - 20px);
+
+  @include max(1023) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  &:last-child {
+    @include max(1023) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.price-item--67 {
+  width: calc(67% - 20px);
+
+  @include max(640) {
+    width: 100%;
+  }
+}
+
+.price-item--pic {
+  width: calc(33.33% - 20px);
+
+  @include max(640) {
+    width: 100%;
+    max-width: 300px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.price-item__title {
+  color: $highlight;
+
+  @include responsive-font(26, 20);
+}
+
+.price-item__title--decor {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 18px;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 47px;
+    height: 2px;
+    content: '';
+    background-color: $highlight;
+  }
+}
+
+.price-item__plus,
+.price-item__minus {
+  position: relative;
+  display: block;
+  padding-left: 18px;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    content: '';
+    background-color: $highlight;
+
+    @include max(1024) {
+      top: 10px;
+    }
+    @include max(640) {
+      top: 8px;
+    }
+  }
+}
+
+.price-item__plus {
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.price__btn {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include max(767) {
+    justify-content: center;
+  }
+}
+
+.price-item__block-title {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+
+  @include responsive-font(21, 18);
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 47px;
+    height: 2px;
+    content: '';
+    background-color: $highlight;
+  }
+}
+
+.price-item__blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.price-item__block {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+
+  @include max(1023) {
+    width: 100%;
+  }
+  span {
+    display: block;
+    margin-bottom: 5px;
+    &.highlight-text {
+      font-weight: 600;
+    }
+  }
+}
