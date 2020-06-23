@@ -29,6 +29,12 @@
   @include max(1023) {
     width: 100%;
   }
+  &:hover {
+    .info-press-item__pic img {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+  }
 }
 
 .info-press-item__pic {
@@ -49,6 +55,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    transition: .5s;
 
     object-fit: cover;
     object-position: center;

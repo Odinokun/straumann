@@ -1,0 +1,16 @@
+mixin reviews-slide(pic, text, videoLink)
+  a(class='reviews-slider__slide' data-fancybox="" href="" + videoLink + "")
+    .reviews-slide__pic
+      img(src="assets/img/reviews-" + pic + ".jpg" alt="picture")
+    .reviews-slide__descr
+      span #{text}
+
+//begin reviews-slider
+.reviews-slider#reviews-slider
+  +reviews-slide('01', 'Виробник, якому можна довіряти',          'https://www.youtube.com/watch?time_continue=74&v=hij3h7m5ZCU&feature=emb_logo')
+  +reviews-slide('02', 'Міжнародні зобов’язання на все життя',    'https://www.youtube.com/watch?time_continue=1&v=2yVtUboqb6o&feature=emb_logo')
+  +reviews-slide('03', 'Унікальна поверхня імплантати SLActive',  'https://www.youtube.com/watch?v=H0-V-8isd_E&feature=emb_logo')
+  +reviews-slide('01', 'Виробник, якому можна довіряти',          'https://www.youtube.com/watch?time_continue=74&v=hij3h7m5ZCU&feature=emb_logo')
+  +reviews-slide('02', 'Міжнародні зобов’язання на все життя',    'https://www.youtube.com/watch?time_continue=1&v=2yVtUboqb6o&feature=emb_logo')
+  +reviews-slide('03', 'Унікальна поверхня імплантати SLActive',  'https://www.youtube.com/watch?v=H0-V-8isd_E&feature=emb_logo')
+//end reviews-slider
