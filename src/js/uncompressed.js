@@ -14,6 +14,7 @@ $(document).ready(function ($) {
     'blog',
     'map-01',
     'map-02',
+    'inner',
     ]);
 });
 
