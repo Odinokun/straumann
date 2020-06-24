@@ -50,6 +50,7 @@
   @include max(1023) {
     position: relative;
     width: 100%;
+    display: block;
   }
   &::before {
     position: absolute;
@@ -126,6 +127,7 @@
   display: block;
   width: 100%;
   max-width: 350px;
+  overflow: hidden;
   height: 35px;
   margin-bottom: 30px;
 }
@@ -148,6 +150,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  overflow: hidden;
   width: 35px;
   height: 35px;
   cursor: pointer;

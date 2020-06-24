@@ -35,6 +35,10 @@
   &:hover {
     .implants-options__item-pic {
       border: 1px solid $highlight;
+      img {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+      }
     }
     .implants-options__item-title {
       font-weight: 700;
@@ -55,6 +59,7 @@
   img {
     display: block;
     width: 100%;
+    transition: .5s;
     border: 1px solid $highlight;
   }
 }

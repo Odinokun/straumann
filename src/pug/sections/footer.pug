@@ -1,7 +1,15 @@
 //begin footer
 footer.footer
   .container
+    .footer__socials
+      a(href="https://www.facebook.com/StraumannUkraine/" target="_blank" rel="nofollow noopener noreferrer").footer__socials-link
+        +svg('inst')
+      a(href="https://www.instagram.com/straumann_ukraine/?hl=ru" target="_blank" rel="nofollow noopener noreferrer").footer__socials-link
+        +svg('fb')
     .footer__copyright Straumann &#169; 2020
-
+    .footer__text
+      | Офіційний постачальник в Україні
+      =' '
+      a(href="https://www.whitegroup.com.ua/" target="_blank" rel="nofollow noopener noreferrer") whitegroup.com.ua
   include ../elements/language
 //end footer

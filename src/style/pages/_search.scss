@@ -92,19 +92,19 @@
   padding: 15px 15px 0 15px;
 }
 
-.search-clinic__logo {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 85px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #fff;
-  img {
-    display: block;
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-}
+//.search-clinic__logo {
+//  display: flex;
+//  justify-content: center;
+//  width: 100%;
+//  max-width: 85px;
+//  margin-bottom: 15px;
+//  border-bottom: 1px solid #fff;
+//  img {
+//    display: block;
+//    max-width: 100%;
+//    margin-bottom: 10px;
+//  }
+//}
 
 .search-clinic__title {
   font-size: 14px;
@@ -116,37 +116,37 @@
   color: #fff;
 }
 
-.search-clinic__slider {
-  width: 100%;
-  .prev,
-  .next {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    width: 33px;
-    height: 18px;
-    cursor: pointer;
-    transform: translateY(-50%);
-    svg {
-      fill: #fff;
-      width: 33px;
-      height: 18px;
-    }
-  }
-  .prev {
-    left: 15px;
-  }
-  .next {
-    right: 15px;
-  }
-}
-
-.search-clinic__slider-img {
-  img {
-    display: block;
-    width: 100%;
-  }
-}
+//.search-clinic__slider {
+//  width: 100%;
+//  .prev,
+//  .next {
+//    position: absolute;
+//    z-index: 1;
+//    top: 50%;
+//    width: 33px;
+//    height: 18px;
+//    cursor: pointer;
+//    transform: translateY(-50%);
+//    svg {
+//      fill: #fff;
+//      width: 33px;
+//      height: 18px;
+//    }
+//  }
+//  .prev {
+//    left: 15px;
+//  }
+//  .next {
+//    right: 15px;
+//  }
+//}
+//
+//.search-clinic__slider-img {
+//  img {
+//    display: block;
+//    width: 100%;
+//  }
+//}
 
 .search-clinic__info {
   position: relative;
@@ -154,6 +154,18 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 90%;
+    max-width: 144px;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: $highlight;
+  }
 }
 
 .search-clinic__doctor {

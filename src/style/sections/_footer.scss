@@ -4,8 +4,10 @@
   .container {
     display: flex;
     justify-content: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   .language {
     position: absolute;
@@ -19,8 +21,49 @@
   }
 }
 
+.footer__socials {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer__socials-link {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    svg {
+      fill: $highlight;
+    }
+  }
+  svg {
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+    transition: .5s;
+  }
+}
+
 .footer__copyright {
   font-weight: 400;
+  padding: 10px 20px;
 
   @include responsive-font(18, 14);
+}
+
+.footer__text {
+  font-weight: 400;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+
+  @include responsive-font(18, 14);
+  @include max(767) {
+    width: 100%;
+  }
 }
