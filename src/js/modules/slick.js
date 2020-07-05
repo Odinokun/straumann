@@ -7,8 +7,18 @@ module.exports = function() {
         dots: true,
         arrows: false,
         fade: true,
-        infinite: true,
-        // autoplay: true
+        infinite: false
+      });
+
+      //скролл при прокрутке колесом мыши
+      $("#index-slider").on("wheel", function (e) {
+        e.preventDefault();
+
+        if (e.originalEvent.deltaY < 0) {
+          $(this).slick("slickPrev");
+        } else {
+          $(this).slick("slickNext");
+        }
       });
     }
 

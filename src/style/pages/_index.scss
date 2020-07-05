@@ -391,8 +391,8 @@
   min-height: 212px;
   &:hover {
     img {
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
+      -webkit-filter: none;
+      filter: none;
     }
   }
 
@@ -402,6 +402,8 @@
     height: 100%;
     transition: .5s;
 
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
     object-fit: cover;
     object-position: 50% 50%;
   }
